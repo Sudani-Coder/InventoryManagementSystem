@@ -1,5 +1,4 @@
-# InventoryManagementSystem
-defining project requirements and objectives:
+Defining project requirements and objectives:
 The goal of this project is to develop a simple console-based inventory management system that allows users to efficiently manage their product stock.
 The system should provide an intuitive interface for users to add, update, view and remove (CRUD) products from the inventory.
 Project name Inventory management system:
@@ -64,3 +63,30 @@ Remove Product -> Choose product -> Delete from inventory
 Return to main menu or exist.
 
 
+Task Breakdown & Code Components:
+Project setup:
+Create a new C# Console Application. 
+Setup a Product class to store product details.
+
+Main menu display:
+Use a while loop to show the menu options.
+Read user input and call the appropriate function.
+
+Adding a Product:
+Prompt the user for name, price and stock quantity.
+Store the product in a list or a dictionary.
+
+Updating Stock:
+Search for a product by name or ID.
+Increase or decrease stock based on user input.
+
+Viewing Products:
+Loop through the product list and display details.
+
+Removing a Product:
+Search for a product by name or ID.
+Remove it from the list.
+
+Error Handling:
+Prevent invalid inputs (e.g., negative stock values, empty product names).
+Handle cases where the product doesn’t exist.
