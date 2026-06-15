@@ -27,8 +27,18 @@ class Program
         Console.WriteLine("Enter product price:");
         decimal price = decimal.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter product quantity:");
-        int quantity = int.Parse(Console.ReadLine());
+        int quantity;
+        while (true)
+        {
+            Console.WriteLine("Enter product quantity:");
+            string quantityInput = Console.ReadLine();
+            if (!int.TryParse(quantityInput, out quantity) || quantity < 0)
+            {
+                Console.WriteLine("Invalid quantity. Please enter a non-negative whole number.");
+                continue;
+            }
+            break;
+        }
 
         Product newProduct = new Product(name, price, quantity);
         inventory.Add(newProduct);
@@ -44,8 +54,19 @@ class Program
 
         if (product != null)
         {
-            Console.WriteLine("Enter new quantity:");
-            int newQuantity = int.Parse(Console.ReadLine());
+            int newQuantity;
+            while (true)
+            {
+                Console.WriteLine("Enter new quantity:");
+                string quantityInput = Console.ReadLine();
+                if (!int.TryParse(quantityInput, out newQuantity) || newQuantity < 0)
+                {
+                    Console.WriteLine("Invalid quantity. Please enter a non-negative whole number.");
+                    continue;
+                }
+                break;
+            }
+
             product.ProductQuantity = newQuantity;
             Console.WriteLine("Stock updated successfully!");
         }
